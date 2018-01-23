@@ -7,7 +7,7 @@ module ChatworkWebhookVerify
       ChatworkWebhookVerify.verify!(
         token:     token,
         body:      request.env["rack.input"].read,
-        signature: request.headers["X-ChatWorkWebhookSignature"],
+        signature: request.headers["X-ChatWorkWebhookSignature"] || params[:chatwork_webhook_signature],
       )
     end
   end
