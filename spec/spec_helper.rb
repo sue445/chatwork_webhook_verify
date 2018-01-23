@@ -1,5 +1,6 @@
 require "bundler/setup"
 require "chatwork_webhook_verify"
+require "rspec/its"
 
 Dir["#{__dir__}/support/**/*.rb"].each { |f| require f }
 

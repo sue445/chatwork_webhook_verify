@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount ChatworkWebhookVerify::Engine => "/chatwork_webhook_verify"
+  post "/webhook" => "webhook#test"
 end
