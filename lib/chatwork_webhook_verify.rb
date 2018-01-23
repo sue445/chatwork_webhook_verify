@@ -1,5 +1,9 @@
 require "chatwork_webhook_verify/engine"
+require "chatwork_webhook_verify/configuration"
 
 module ChatworkWebhookVerify
-  # Your code goes here...
+  # @return [ChatworkWebhookVerify::Configuration]
+  def self.config
+    @config ||= Configuration.new
+  end
 end
