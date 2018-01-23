@@ -1,4 +1,3 @@
-require "chatwork_webhook_verify/engine"
 require "chatwork_webhook_verify/configuration"
 
 module ChatworkWebhookVerify

@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "Verify ChatWork webhook signature"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["lib/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_development_dependency "rails"
