@@ -5,3 +5,5 @@ spec/dummy/log/*.log
 spec/dummy/tmp/
 
 Gemfile.lock
+.yardoc/
+doc/

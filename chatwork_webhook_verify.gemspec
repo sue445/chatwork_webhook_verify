@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "railties"
   s.add_development_dependency "rspec-its"
   s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "yard"
 end
