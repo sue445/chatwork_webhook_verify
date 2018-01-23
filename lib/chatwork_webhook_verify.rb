@@ -1,5 +1,5 @@
 require "chatwork_webhook_verify/configuration"
-require "chatwork_webhook_verify/controller_extension" if defined?(Rails)
+require "chatwork_webhook_verify/railtie" if defined?(Rails)
 
 module ChatworkWebhookVerify
   require "base64"

@@ -15,6 +15,7 @@ require "action_controller/railtie"
 
 Bundler.require(*Rails.groups)
 require "chatwork_webhook_verify"
+require "chatwork_webhook_verify/railtie"
 
 module Dummy
   class Application < Rails::Application

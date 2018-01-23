@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_development_dependency "actionpack"
+  s.add_development_dependency "railties"
   s.add_development_dependency "rspec-its"
   s.add_development_dependency "rspec-rails"
 end

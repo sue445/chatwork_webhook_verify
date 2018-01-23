@@ -36,7 +36,7 @@ ChatworkWebhookVerify.verify!(token: token, body: body, signature: signature)
 * `signature` : `chatwork_webhook_signature` (query string) or `X-ChatWorkWebhookSignature` (request header)
 
 ## for Rails
-include `ChatworkWebhookVerify::ControllerExtension` in controller and call `verify_chatwork_webhook_signature!`
+call `verify_chatwork_webhook_signature!` in your controller
 
 e.g.
 

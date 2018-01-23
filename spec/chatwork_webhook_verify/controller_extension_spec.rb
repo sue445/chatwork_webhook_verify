@@ -1,4 +1,5 @@
 require "rails_helper"
+require "chatwork_webhook_verify/controller_extension"
 
 RSpec.describe ChatworkWebhookVerify::ControllerExtension, type: :request do
   # NOTE: there are valid

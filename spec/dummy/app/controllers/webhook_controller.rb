@@ -1,6 +1,4 @@
 class WebhookController < ApplicationController
-  include ChatworkWebhookVerify::ControllerExtension
-
   before_action :verify_chatwork_webhook_signature!
 
   def test
