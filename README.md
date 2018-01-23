@@ -1,8 +1,5 @@
 # ChatworkWebhookVerify
-Short description and motivation.
-
-## Usage
-How to use my plugin.
+Verify ChatWork webhook signature
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -19,6 +16,47 @@ $ bundle
 Or install it yourself as:
 ```bash
 $ gem install chatwork_webhook_verify
+```
+
+## Basic usage
+```ruby
+ChatworkWebhookVerify.verify?(token: token, body: body, signature: signature)
+#=> true | false
+```
+
+or 
+
+```ruby
+ChatworkWebhookVerify.verify!(token: token, body: body, signature: signature)
+#=> raise ChatworkWebhookVerify::InvalidSignatureError if signature is invalid
+```
+
+* `token` : webhook token (default: `ChatworkWebhookVerify.config.token`)
+* `body` : request body from webhook
+* `signature` : `chatwork_webhook_signature` (query string) or `X-ChatWorkWebhookSignature` (request header)
+
+## for Rails
+include `ChatworkWebhookVerify::ControllerExtension` in controller and call `verify_chatwork_webhook_signature!`
+
+e.g.
+
+```ruby
+class WebhookController < ApplicationController
+  # `ChatworkWebhookVerify.config.token` is used
+  before_action :verify_chatwork_webhook_signature!
+end
+```
+
+or
+
+```ruby
+class WebhookController < ApplicationController
+  before_action :verify_chatwork_webhook_signature_with_own_token!
+  
+  def verify_chatwork_webhook_signature_with_own_token!
+    verify_chatwork_webhook_signature!("another_token")
+  end
+end
 ```
 
 ## Contributing
