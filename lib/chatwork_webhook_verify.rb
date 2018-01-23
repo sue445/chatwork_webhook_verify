@@ -38,8 +38,8 @@ module ChatworkWebhookVerify
     raise InvalidSignatureError unless verify?(token: token, body: body, signature: signature)
   end
 
-  # @param token [String]
-  # @param body [String]
+  # @param token [String] webhook token (default: `ChatworkWebhookVerify.config.token`)
+  # @param body  [String] request body
   #
   # @return [String]
   def self.generate_signature(token:, body:)
