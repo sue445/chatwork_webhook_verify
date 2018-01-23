@@ -9,12 +9,12 @@ Gem::Specification.new do |s|
   s.version     = ChatworkWebhookVerify::VERSION
   s.authors     = ["sue445"]
   s.email       = ["sue445@sue445.net"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of ChatworkWebhookVerify."
-  s.description = "TODO: Description of ChatworkWebhookVerify."
+  s.homepage    = "https://github.com/sue445/chatwork_webhook_verify"
+  s.summary     = "Verify ChatWork webhook signature"
+  s.description = "Verify ChatWork webhook signature"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 5.2.0.beta2"
+  s.add_development_dependency "rails"
 end
