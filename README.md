@@ -32,13 +32,14 @@ ChatworkWebhookVerify.verify!(token: token, body: body, signature: signature)
 ```
 
 * `token` : webhook token (default: `ChatworkWebhookVerify.config.token`)
+  * Either `token` or `ChatworkWebhookVerify.config.token` is required
 * `body` : request body from webhook
 * `signature` : `chatwork_webhook_signature` (query string) or `X-ChatWorkWebhookSignature` (request header)
 
 ## for Rails
 call `verify_chatwork_webhook_signature!` in your controller
 
-e.g.
+### Example 1
 
 ```ruby
 class WebhookController < ApplicationController
@@ -47,7 +48,7 @@ class WebhookController < ApplicationController
 end
 ```
 
-or
+### Example 2
 
 ```ruby
 class WebhookController < ApplicationController
@@ -58,6 +59,13 @@ class WebhookController < ApplicationController
   end
 end
 ```
+
+## Configuration
+```ruby
+ChatworkWebhookVerify.config.token = ENV["CHATWORK_WEBHOOK_TOKEN"]
+```
+
+* `token` : default webhook token
 
 ## Contributing
 Contribution directions go here.

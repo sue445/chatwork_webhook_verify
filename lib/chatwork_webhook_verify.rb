@@ -14,6 +14,8 @@ module ChatworkWebhookVerify
   # @param signature [String] chatwork_webhook_signature or X-ChatWorkWebhookSignature
   #
   # @return [Boolean]
+  #
+  # @note Either `token` or `ChatworkWebhookVerify.config.token` is required
   def self.verify?(token: nil, body:, signature:)
     token ||= config.token
 
@@ -30,6 +32,8 @@ module ChatworkWebhookVerify
   # @param signature [String] chatwork_webhook_signature or X-ChatWorkWebhookSignature
   #
   # @raise [InvalidSignatureError] signature is invalid
+  #
+  # @note Either `token` or `ChatworkWebhookVerify.config.token` is required
   def self.verify!(token: nil, body:, signature:)
     raise InvalidSignatureError unless verify?(token: token, body: body, signature: signature)
   end
