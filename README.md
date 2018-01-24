@@ -1,6 +1,8 @@
 # ChatworkWebhookVerify
 Verify ChatWork webhook signature
 
+[![Build Status](https://travis-ci.org/sue445/chatwork_webhook_verify.svg?branch=master)](https://travis-ci.org/sue445/chatwork_webhook_verify)
+
 ## Installation
 Add this line to your application's Gemfile:
 
