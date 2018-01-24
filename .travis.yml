@@ -11,14 +11,14 @@ gemfile:
 - gemfiles/activerecord_5_2.gemfile
 before_script:
 - export CI=true
-#- export CODECLIMATE_REPO_TOKEN=
+- export CODECLIMATE_REPO_TOKEN=fc2954c6a30b02c5bf0bb7b03bef3a65249dba39403ea4e40acc05e604e8c967
 before_install:
 - gem update --system --no-document
 - gem install bundler -v 1.16.1 --no-document
 bundler_args: "--jobs=2"
 script:
 - bundle exec rspec
-#- bundle exec codeclimate-test-reporter
+- bundle exec codeclimate-test-reporter
 branches:
   only:
   - master

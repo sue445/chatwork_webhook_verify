@@ -2,6 +2,8 @@
 Verify ChatWork webhook signature
 
 [![Build Status](https://travis-ci.org/sue445/chatwork_webhook_verify.svg?branch=master)](https://travis-ci.org/sue445/chatwork_webhook_verify)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d7ea5e910c29987c7c0e/maintainability)](https://codeclimate.com/github/sue445/chatwork_webhook_verify/maintainability)
+[![Coverage Status](https://coveralls.io/repos/github/sue445/chatwork_webhook_verify/badge.svg?branch=master)](https://coveralls.io/github/sue445/chatwork_webhook_verify?branch=master)
 
 ## Installation
 Add this line to your application's Gemfile:
