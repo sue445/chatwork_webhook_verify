@@ -24,6 +24,8 @@ branches:
   - master
 notifications:
   email: false
+  slack:
+    secure: DXSWgq3btzGA6K+R2ra10x/Y9WMJ/OsZyYuofGFbEj+ozWSu525lcVajUTDt0hmYWUMeAGIocv4FekOJ/cTcfVeMd9H1tJRCy1tKM/fD/iOH3fwSQfoKqVfrFrePS1ktBnNBeuR85m6rjQEOFddgerVpJVl052+9c7LYrIbxkh8B6PJxL0AKaDf/WPMvmPIiVieZzjajkwa8mGitr5pmlofM8BbBtZ4ehKapRMeXY5lMZwtKWHBB0l7+D0926DpGb1xyAmmoATpADXZg5vNr5BZlwZK66KExddCt1KZCqf/n0xTHrMKnq96LPMtqslEZDwJwjCMJOqE0d5Eqxp5qGcHiOTANY2Ml2+EOoEnYMTWK5VT40uZ/GFAI9QM6yY2cxCu+gOt/jmUqm6Zv9lpa0nQC6OaMFd2lJPsn7JFsn4AnSfD7qg6L1hwVOzAM0H80WJmsqQyeFVTnnPIK7cltNhf+zz3UAUiBGrFld4UzrVZlLFWHm/57QTz5ed9EXu/wd47grmE+vTBimN82BBeXlsPtjgrRPo1BoDcjJfzYTugFiWZRCwykOZhZAzbtdTbD02jHrbjcOe5EXPyjBVQCqkfctKsunUxxCXp3nLVa0lhPOweSf5+vK+pH95+PV7oQgwCbo4k1l85zpFRaQlkA9cGE5vKoJ6LP7OKaxTN+haA=
 matrix:
   allow_failures:
   - rvm: ruby-head
