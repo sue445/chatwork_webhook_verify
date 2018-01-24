@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "codeclimate-test-reporter", "~> 1.0.0"
   s.add_development_dependency "coveralls"
   s.add_development_dependency "railties"
+  s.add_development_dependency "rake"
   s.add_development_dependency "rspec-its"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "simplecov"
