@@ -2,7 +2,7 @@ module ChatworkWebhookVerify
   module ControllerExtension
     # @param token     [String] webhook token (default: `ChatworkWebhookVerify.config.token`)
     #
-    # @raise [InvalidSignatureError] signature is invalid
+    # @raise [ActionController::BadRequest] signature is invalid
     def verify_chatwork_webhook_signature!(token = nil)
       ChatworkWebhookVerify.verify!(
         token:     token,
