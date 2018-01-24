@@ -31,7 +31,7 @@ RSpec.describe ChatworkWebhookVerify::ControllerExtension, type: :request do
     context "with invalid signature" do
       let(:signature) { "AAAAAAAAA" }
 
-      it { expect { subject }.to raise_error ChatworkWebhookVerify::InvalidSignatureError }
+      it { expect { subject }.to raise_error ActionController::BadRequest }
     end
   end
 end
