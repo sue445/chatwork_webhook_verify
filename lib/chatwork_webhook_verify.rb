@@ -19,8 +19,8 @@ module ChatworkWebhookVerify
   def self.verify?(token: nil, body:, signature:)
     token ||= config.token
 
-    raise "Either token or ChatworkWebhookVerify.config.token is required" if !token || token.empty?
-    raise "signature is required" if !signature || signature.empty?
+    raise ArgumentError, "Either token or ChatworkWebhookVerify.config.token is required" if !token || token.empty?
+    raise ArgumentError, "signature is required" if !signature || signature.empty?
 
     generate_signature(token: token, body: body) == signature
   end

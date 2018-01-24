@@ -9,7 +9,7 @@ module ChatworkWebhookVerify
         body:      request.env["rack.input"].read,
         signature: request.headers["X-ChatWorkWebhookSignature"] || params[:chatwork_webhook_signature],
       )
-    rescue ChatworkWebhookVerify::InvalidSignatureError
+    rescue ChatworkWebhookVerify::InvalidSignatureError, ::ArgumentError
       raise ActionController::BadRequest, "signature is invalid"
     end
   end
