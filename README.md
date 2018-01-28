@@ -46,8 +46,13 @@ ChatworkWebhookVerify.verify!(token: token, body: body, signature: signature)
 call `verify_chatwork_webhook_signature!` in your controller
 
 ### Example 1
+```ruby
+# config/initializers/chatwork_webhook_verify.rb
+ChatworkWebhookVerify.config.token = ENV["CHATWORK_WEBHOOK_TOKEN"]
+```
 
 ```ruby
+# app/controllers/webhook_controller.rb
 class WebhookController < ApplicationController
   # `ChatworkWebhookVerify.config.token` is used
   before_action :verify_chatwork_webhook_signature!
@@ -55,8 +60,8 @@ end
 ```
 
 ### Example 2
-
 ```ruby
+# app/controllers/webhook_controller.rb
 class WebhookController < ApplicationController
   before_action :verify_chatwork_webhook_signature_with_own_token!
   
