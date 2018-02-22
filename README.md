@@ -71,6 +71,24 @@ class WebhookController < ApplicationController
 end
 ```
 
+## for Sinatra
+```ruby
+# app.rb
+class App < Sinatra::Base
+  before "/webhook" do
+    token     = ENV["CHATWORK_WEBHOOK_TOKEN"]
+    body      = request.body.read
+    signature = request.env["HTTP_X_CHATWORKWEBHOOKSIGNATURE"]
+
+    ChatworkWebhookVerify.verify!(token: token, body: body, signature: signature)
+  end
+
+  post "/webhook" do
+    "ok"
+  end
+end
+```
+
 ## Configuration
 ```ruby
 ChatworkWebhookVerify.config.token = ENV["CHATWORK_WEBHOOK_TOKEN"]
