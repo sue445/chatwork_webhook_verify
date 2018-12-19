@@ -31,9 +31,6 @@ notifications:
 matrix:
   allow_failures:
     - rvm: ruby-head
-
-    # TODO: Remove after rails 5.2.0 is released!
-    - gemfile: gemfiles/activerecord_5_2.gemfile
 cache: bundler
 sudo: false
 dist: precise
