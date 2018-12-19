@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_development_dependency "actionpack"
-  s.add_development_dependency "codeclimate-test-reporter", "~> 1.0.0"
   s.add_development_dependency "coveralls"
   s.add_development_dependency "railties"
   s.add_development_dependency "rake"

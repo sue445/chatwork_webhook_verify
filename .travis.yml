@@ -10,15 +10,17 @@ gemfile:
   - gemfiles/activerecord_5_1.gemfile
   - gemfiles/activerecord_5_2.gemfile
 before_script:
-  - export CI=true
-  - export CODECLIMATE_REPO_TOKEN=fc2954c6a30b02c5bf0bb7b03bef3a65249dba39403ea4e40acc05e604e8c967
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 before_install:
   - gem update --system --no-document
   - gem install bundler -v 1.16.1 --no-document
 bundler_args: "--jobs=2"
 script:
   - bundle exec rspec
-  - bundle exec codeclimate-test-reporter
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 branches:
   only:
     - master
@@ -35,3 +37,6 @@ matrix:
 cache: bundler
 sudo: false
 dist: precise
+env:
+  global:
+    - CC_TEST_REPORTER_ID=fc2954c6a30b02c5bf0bb7b03bef3a65249dba39403ea4e40acc05e604e8c967
