@@ -3,8 +3,8 @@ rvm:
   - 2.2.2
   - 2.3
   - 2.4
-  - 2.5.0
-  - 2.6.0
+  - 2.5
+  - 2.6
   - ruby-head
 gemfile:
   - gemfiles/activerecord_5_0.gemfile
@@ -31,9 +31,13 @@ notifications:
 matrix:
   allow_failures:
     - rvm: ruby-head
+  include:
+    - rvm: 2.6
+      env: RUBYOPT="--jit"
+    - rvm: ruby-head
+      env: RUBYOPT="--jit"
 cache: bundler
 sudo: false
-dist: precise
 env:
   global:
     - CC_TEST_REPORTER_ID=fc2954c6a30b02c5bf0bb7b03bef3a65249dba39403ea4e40acc05e604e8c967
