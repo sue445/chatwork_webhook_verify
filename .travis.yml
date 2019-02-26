@@ -10,6 +10,7 @@ gemfile:
   - gemfiles/activerecord_5_0.gemfile
   - gemfiles/activerecord_5_1.gemfile
   - gemfiles/activerecord_5_2.gemfile
+  - gemfiles/activerecord_6_0.gemfile
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
@@ -32,11 +33,20 @@ notifications:
 matrix:
   allow_failures:
     - rvm: ruby-head
+    - gemfile: gemfiles/activerecord_6_0.gemfile # TODO: Remove after rails 6.0.0 is released
   include:
     - rvm: 2.6
       env: RUBYOPT="--jit"
     - rvm: ruby-head
       env: RUBYOPT="--jit"
+  exclude:
+    # Rails 6.0+ requires Ruby 2.5+
+    - rvm: 2.2.2
+      gemfile: gemfiles/activerecord_6_0.gemfile
+    - rvm: 2.3
+      gemfile: gemfiles/activerecord_6_0.gemfile
+    - rvm: 2.4
+      gemfile: gemfiles/activerecord_6_0.gemfile
 cache: bundler
 sudo: false
 env:
