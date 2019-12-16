@@ -16,7 +16,6 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 before_install:
-  - travis_retry gem update --system || travis_retry gem update --system 2.7.8
   - travis_retry gem install bundler --no-document || travis_retry gem install bundler --no-document -v 1.17.3
 bundler_args: "--jobs=2"
 script:
