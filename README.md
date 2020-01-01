@@ -2,7 +2,7 @@
 Verify ChatWork webhook signature
 
 [![Gem Version](https://badge.fury.io/rb/chatwork_webhook_verify.svg)](https://badge.fury.io/rb/chatwork_webhook_verify)
-[![Build Status](https://travis-ci.org/sue445/chatwork_webhook_verify.svg?branch=master)](https://travis-ci.org/sue445/chatwork_webhook_verify)
+[![Build Status](https://github.com/sue445/chatwork_webhook_verify/workflows/test/badge.svg?branch=master)](https://github.com/sue445/chatwork_webhook_verify/actions?query=workflow%3Atest)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d7ea5e910c29987c7c0e/maintainability)](https://codeclimate.com/github/sue445/chatwork_webhook_verify/maintainability)
 [![Coverage Status](https://coveralls.io/repos/github/sue445/chatwork_webhook_verify/badge.svg?branch=master)](https://coveralls.io/github/sue445/chatwork_webhook_verify?branch=master)
 
