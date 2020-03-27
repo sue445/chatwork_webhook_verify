@@ -1,4 +1,8 @@
 if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.3.0")
   # i18n v1.5.2+ requires ruby 2.3.0+
   gem "i18n", "< 1.5.2"
+
+  # rspec-rails uses `&.`, but `&.` requires ruby 2.3+
+  # https://github.com/rspec/rspec-rails/blob/v4.0.0/lib/rspec/rails/example/mailer_example_group.rb#L25
+  gem "rspec-rails", "< 4.0.0"
 end
