@@ -51,6 +51,9 @@ jobs:
           - ruby:    ruby:2.4
             gemfile: rails_6_0.gemfile
 
+    env:
+      BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}
+
     steps:
       - uses: actions/checkout@v2
 
