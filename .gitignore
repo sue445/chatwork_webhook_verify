@@ -7,3 +7,4 @@ spec/dummy/tmp/
 Gemfile.lock
 .yardoc/
 doc/
+coverage/
