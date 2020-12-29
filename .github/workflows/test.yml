@@ -42,15 +42,13 @@ jobs:
             allow_failures: "true"
 
         exclude:
-          # Rails 6.0 requires Ruby 2.5+
+          # Rails 6.0+ requires Ruby 2.5+
           - ruby:    ruby:2.2
             gemfile: rails_6_0
           - ruby:    ruby:2.3
             gemfile: rails_6_0
           - ruby:    ruby:2.4
             gemfile: rails_6_0
-
-          # Rails 6.1 requires Ruby 2.5+
           - ruby:    ruby:2.2
             gemfile: rails_6_1
           - ruby:    ruby:2.3
