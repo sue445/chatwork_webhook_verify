@@ -14,6 +14,11 @@ Gem::Specification.new do |s|
   s.description = "Verify ChatWork webhook signature"
   s.license     = "MIT"
 
+  s.metadata["homepage_uri"] = s.homepage
+  s.metadata["source_code_uri"] = s.homepage
+  s.metadata["changelog_uri"] = "#{s.homepage}/blob/master/CHANGELOG.md"
+  s.metadata["rubygems_mfa_required"] = "true"
+
   s.files = Dir["lib/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
