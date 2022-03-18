@@ -6,3 +6,8 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.3.0")
   # https://github.com/rspec/rspec-rails/blob/v4.0.0/lib/rspec/rails/example/mailer_example_group.rb#L25
   gem "rspec-rails", "< 4.0.0"
 end
+
+if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.5.0")
+  # racc v1.6.0+ requires ruby 2.5.0+
+  gem "racc", "< 1.6.0"
+end
