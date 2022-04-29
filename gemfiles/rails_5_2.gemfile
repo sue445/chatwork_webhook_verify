@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 # FIXME: Ruby 2.2 + Rails 5.2.6.1+ doesn't work
 # c.f. https://github.com/sue445/chatwork_webhook_verify/runs/5245828211?check_suite_focus=true
-gem "rails", "~> 5.2.0", "!= 5.2.6.1", "!= 5.2.6.2"
+gem "rails", "~> 5.2.0", "< 5.2.6.1" 
 
 eval_gemfile "./common.gemfile"
 
