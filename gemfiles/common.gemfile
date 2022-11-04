@@ -8,6 +8,9 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.3.0")
 
   # mini_portile2 v2.5.1+ requires ruby 2.3.0+
   gem "mini_portile2", "< 2.5.1"
+
+  # rack v2.2.0+ requires ruby 2.3.0+
+  gem "rack", "< 2.2.0"
 end
 
 if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.4.0")
