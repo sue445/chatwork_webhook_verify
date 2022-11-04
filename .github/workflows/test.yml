@@ -90,11 +90,7 @@ jobs:
           bundler-cache: true
           cache-version: ${{ matrix.gemfile }}
 
-      - name: bundle update
-        run: |
-          set -xe
-          bundle config path vendor/bundle
-          bundle update --jobs $(nproc) --retry 3
+      - run: bundle update --jobs $(nproc) --retry 3
 
       - name: Setup Code Climate Test Reporter
         uses: aktions/codeclimate-test-reporter@v1
