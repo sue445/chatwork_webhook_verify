@@ -14,8 +14,8 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.3.0")
 end
 
 if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.4.0")
-  # nio4r v2.5.4+ requires ruby 2.4.0+
-  gem "nio4r", "< 2.5.4"
+  # nio4r v2.5.3+ requires ruby 2.4.0+
+  gem "nio4r", "< 2.5.3"
 end
 
 if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.5.0")
@@ -24,6 +24,9 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.5.0")
 
   # globalid v0.5.1 requires ruby 2.6.0+ and v0.5.2+ requires ruby 2.5.0+
   gem "globalid", "< 0.5.1"
+
+  # NOTE: docile v1.4.0+ requires Ruby 2.5.0+
+  gem "docile", "< 1.4.0"
 end
 
 if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.6.0")
