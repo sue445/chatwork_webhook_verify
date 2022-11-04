@@ -5,6 +5,9 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.3.0")
   # rspec-rails uses `&.`, but `&.` requires ruby 2.3+
   # https://github.com/rspec/rspec-rails/blob/v4.0.0/lib/rspec/rails/example/mailer_example_group.rb#L25
   gem "rspec-rails", "< 4.0.0"
+
+  # mini_portile2 v2.5.1+ requires ruby 2.3.0+
+  gem "mini_portile2", "< 2.5.1"
 end
 
 if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.5.0")
