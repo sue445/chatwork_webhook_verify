@@ -8,14 +8,38 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.3.0")
 
   # mini_portile2 v2.5.1+ requires ruby 2.3.0+
   gem "mini_portile2", "< 2.5.1"
+
+  # rack v2.2.0+ requires ruby 2.3.0+
+  gem "rack", "< 2.2.0"
+end
+
+if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.4.0")
+  # nio4r v2.5.4+ requires ruby 2.4.0+
+  gem "nio4r", "< 2.5.4"
 end
 
 if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.5.0")
   # racc v1.6.0+ requires ruby 2.5.0+
   gem "racc", "< 1.6.0"
+
+  # globalid v0.5.1 requires ruby 2.6.0+ and v0.5.2+ requires ruby 2.5.0+
+  gem "globalid", "< 0.5.1"
 end
 
 if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.6.0")
   # minitest v5.16.0+ requires ruby 2.6.0+
   gem "minitest", "< 5.16.0"
+end
+
+if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.3.0")
+  # nokogiri v1.10.0+ requires ruby 2.3.0+
+  gem "nokogiri", "< 1.10.0"
+
+elsif Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.5.0")
+  # nokogiri v1.11.0+ requires ruby 2.5.0+
+  gem "nokogiri", "< 1.11.0"
+
+elsif Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.6.0")
+  # nokogiri v1.13.0+ requires ruby 2.6.0+
+  gem "nokogiri", "< 1.13.0"
 end
