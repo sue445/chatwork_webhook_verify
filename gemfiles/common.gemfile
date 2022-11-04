@@ -10,6 +10,11 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.3.0")
   gem "mini_portile2", "< 2.5.1"
 end
 
+if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.4.0")
+  # nio4r v2.5.4+ requires ruby 2.4.0+
+  gem "nio4r", "< 2.5.4"
+end
+
 if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.5.0")
   # racc v1.6.0+ requires ruby 2.5.0+
   gem "racc", "< 1.6.0"
