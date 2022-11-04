@@ -93,7 +93,7 @@ jobs:
       - run: bundle update --jobs $(nproc) --retry 3
 
       - name: Setup Code Climate Test Reporter
-        uses: aktions/codeclimate-test-reporter@v1
+        uses: sue445/codeclimate-test-reporter@node16
         with:
           codeclimate-test-reporter-id: ${{ secrets.CC_TEST_REPORTER_ID }}
           command: before-build
@@ -106,7 +106,7 @@ jobs:
           bundle exec rspec
 
       - name: Teardown Code Climate Test Reporter
-        uses: aktions/codeclimate-test-reporter@v1
+        uses: sue445/codeclimate-test-reporter@node16
         with:
           codeclimate-test-reporter-id: ${{ secrets.CC_TEST_REPORTER_ID }}
           command: after-build
