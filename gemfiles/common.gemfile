@@ -11,3 +11,8 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.5.0")
   # racc v1.6.0+ requires ruby 2.5.0+
   gem "racc", "< 1.6.0"
 end
+
+if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.6.0")
+  # minitest v5.16.0+ requires ruby 2.6.0+
+  gem "minitest", "< 5.16.0"
+end
