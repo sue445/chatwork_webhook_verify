@@ -11,9 +11,19 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.3.0")
 
   # rack v2.2.0+ requires ruby 2.3.0+
   gem "rack", "< 2.2.0"
+
+  # json v2.6.0+ requires ruby 2.3.0+
+  gem "json", "< 2.6.0"
+
+  # webrick v1.4.0+ requires ruby 2.3.0+
+  gem "webrick", "< 1.4.0"
 end
 
-if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.4.0")
+if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.3.0")
+  # nio4r v2.4.0+ requires ruby 2.3.0+
+  gem "nio4r", "< 2.4.0"
+
+elsif Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.4.0")
   # nio4r v2.5.3+ requires ruby 2.4.0+
   gem "nio4r", "< 2.5.3"
 end
@@ -30,6 +40,9 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.5.0")
 
   # NOTE: sprockets v4.0.0+ requires Ruby 2.5.0+
   gem "sprockets", "< 4.0.0"
+
+  # NOTE: sprockets-rails v3.3.0+ requires Ruby 2.5.0+
+  gem "sprockets-rails", "< 3.3.0"
 end
 
 if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.6.0")
