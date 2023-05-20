@@ -43,6 +43,10 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.5.0")
 
   # NOTE: sprockets-rails v3.3.0+ requires Ruby 2.5.0+
   gem "sprockets-rails", "< 3.3.0"
+
+  # NOTE: loofah v2.21.0+ requires Nokogiri::HTML4 (nokogiri v1.12.0+)
+  # c.f. https://github.com/sue445/chatwork_webhook_verify/commit/74c2309304546595b603fef8407cb1b2c86cd431/checks
+  gem "loofah", "< 2.21.0"
 end
 
 if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.6.0")
