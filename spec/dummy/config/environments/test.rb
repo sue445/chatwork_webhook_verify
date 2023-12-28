@@ -23,7 +23,11 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Raise exceptions instead of rendering exception templates.
-  config.action_dispatch.show_exceptions = false
+  if ActiveSupport.version >= Gem::Version.new("7.1.0")
+    config.action_dispatch.show_exceptions = :none
+  else
+    config.action_dispatch.show_exceptions = false
+  end
 
   # Disable request forgery protection in test environment.
   config.action_controller.allow_forgery_protection = false
@@ -33,4 +37,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  if ActiveSupport.version >= Gem::Version.new("7.1.0")
+    config.active_support.cache_format_version = 7.0
+  end
 end
