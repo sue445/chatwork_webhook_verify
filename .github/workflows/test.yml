@@ -22,8 +22,6 @@ jobs:
 
       matrix:
         ruby:
-          - "2.2"
-          - "2.3"
           - "2.4"
           - "2.5"
           - "2.6"
@@ -41,17 +39,8 @@ jobs:
           - rails_7_0
           - rails_7_1
 
-        include:
-          # ref. https://github.com/ruby/setup-ruby/issues/496#issuecomment-1520662740
-          - ruby: "2.2"
-            runner: ubuntu-20.04
-
         exclude:
           # Rails 6.0+ requires Ruby 2.5+
-          - ruby:    "2.2"
-            gemfile: rails_6_0
-          - ruby:    "2.3"
-            gemfile: rails_6_0
           - ruby:    "2.4"
             gemfile: rails_6_0
           - ruby:    "2.2"
@@ -62,10 +51,6 @@ jobs:
             gemfile: rails_6_1
 
           # Rails 7.0+ requires Ruby 2.7+
-          - ruby:    "2.2"
-            gemfile: rails_7_0
-          - ruby:    "2.3"
-            gemfile: rails_7_0
           - ruby:    "2.4"
             gemfile: rails_7_0
           - ruby:    "2.5"
