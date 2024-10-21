@@ -38,6 +38,8 @@ jobs:
           - rails_6_1
           - rails_7_0
           - rails_7_1
+          - rails_7_2
+          - rails_8_0
 
         exclude:
           # Rails 6.0+ requires Ruby 2.5+
@@ -59,6 +61,32 @@ jobs:
             gemfile: rails_7_1
           - ruby:    "2.6"
             gemfile: rails_7_1
+
+          # Rails 7.2+ requires Ruby 3.1+
+          - ruby:    "2.4"
+            gemfile: rails_7_2
+          - ruby:    "2.5"
+            gemfile: rails_7_2
+          - ruby:    "2.6"
+            gemfile: rails_7_2
+          - ruby:    "2.7"
+            gemfile: rails_7_2
+          - ruby:    "3.0"
+            gemfile: rails_7_2
+
+          # Rails 8.0+ requires Ruby 3.2+
+          - ruby:    "2.4"
+            gemfile: rails_8_0
+          - ruby:    "2.5"
+            gemfile: rails_8_0
+          - ruby:    "2.6"
+            gemfile: rails_8_0
+          - ruby:    "2.7"
+            gemfile: rails_8_0
+          - ruby:    "3.0"
+            gemfile: rails_8_0
+          - ruby:    "3.1"
+            gemfile: rails_8_0
 
           # Rails 5.x doesn't work on Ruby 3.0+
           - ruby:    "3.0"
