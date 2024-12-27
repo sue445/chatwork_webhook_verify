@@ -4,6 +4,12 @@ source "https://rubygems.org"
 # c.f. https://gist.github.com/yahonda/2776d8d7b6ea7045359f38c10449937b
 gem "rails", "~> 7.0.1"
 
+# for Ruby 3.4+
+gem "base64"
+gem "bigdecimal"
+gem "drb"
+gem "mutex_m"
+
 # eval_gemfile "./common.gemfile"
 
 gemspec path: '../'
