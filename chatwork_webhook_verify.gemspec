@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "Verify ChatWork webhook signature"
   s.license     = "MIT"
 
-  s.required_ruby_version = ">= 2.4"
+  s.required_ruby_version = ">= 3.1"
 
   s.metadata["homepage_uri"] = s.homepage
   s.metadata["source_code_uri"] = s.homepage
