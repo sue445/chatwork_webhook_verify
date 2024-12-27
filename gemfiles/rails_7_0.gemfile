@@ -4,6 +4,6 @@ source "https://rubygems.org"
 # c.f. https://gist.github.com/yahonda/2776d8d7b6ea7045359f38c10449937b
 gem "rails", "~> 7.0.1"
 
-eval_gemfile "./common.gemfile"
+# eval_gemfile "./common.gemfile"
 
 gemspec path: '../'
