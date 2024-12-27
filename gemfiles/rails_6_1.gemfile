@@ -2,6 +2,12 @@ source "https://rubygems.org"
 
 gem "rails", "~> 6.1.0"
 
+# for Ruby 3.4+
+gem "base64"
+gem "bigdecimal"
+gem "drb"
+gem "mutex_m"
+
 # eval_gemfile "./common.gemfile"
 
 gemspec path: '../'
