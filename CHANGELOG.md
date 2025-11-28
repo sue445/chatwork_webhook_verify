@@ -1,6 +1,12 @@
 ## Unreleased
 [full changelog](http://github.com/sue445/chatwork_webhook_verify/compare/v2.0.0...master)
 
+## [v2.0.1](https://github.com/sue445/chatwork_webhook_verify/releases/tag/v2.0.1)
+[full changelog](http://github.com/sue445/chatwork_webhook_verify/compare/v2.0.0...v2.0.1)
+
+* Release gem from GitHub Actions
+  * https://github.com/sue445/chatwork_webhook_verify/pull/83
+
 ## v2.0.0
 [full changelog](http://github.com/sue445/chatwork_webhook_verify/compare/v1.0.0...v2.0.0)
 
