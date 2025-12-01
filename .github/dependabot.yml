@@ -5,7 +5,9 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
+      timezone: Asia/Tokyo
+      time: "05:00"
     cooldown:
       default-days: 7
     assignees:
