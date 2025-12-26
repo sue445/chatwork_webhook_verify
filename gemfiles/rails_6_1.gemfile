@@ -8,6 +8,9 @@ gem "bigdecimal"
 gem "drb"
 gem "mutex_m"
 
+# for Ruby 4.0+
+gem "benchmark"
+
 # eval_gemfile "./common.gemfile"
 
 gemspec path: '../'
