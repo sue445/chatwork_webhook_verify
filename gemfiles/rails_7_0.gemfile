@@ -10,6 +10,6 @@ gem "bigdecimal"
 gem "drb"
 gem "mutex_m"
 
-# eval_gemfile "./common.gemfile"
+eval_gemfile "./common.gemfile"
 
 gemspec path: '../'
