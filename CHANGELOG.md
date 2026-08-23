@@ -1,5 +1,11 @@
 ## Unreleased
-[full changelog](http://github.com/sue445/chatwork_webhook_verify/compare/v2.0.0...master)
+[full changelog](http://github.com/sue445/chatwork_webhook_verify/compare/v2.0.2...master)
+
+## [v2.0.2](https://github.com/sue445/chatwork_webhook_verify/releases/tag/v2.0.2)
+[full changelog](http://github.com/sue445/chatwork_webhook_verify/compare/v2.0.1...v2.0.2)
+
+* Migrate release_gem workflow to sue445/workflows (Also testing the gem release)
+  * https://github.com/sue445/chatwork_webhook_verify/pull/125
 
 ## [v2.0.1](https://github.com/sue445/chatwork_webhook_verify/releases/tag/v2.0.1)
 [full changelog](http://github.com/sue445/chatwork_webhook_verify/compare/v2.0.0...v2.0.1)
